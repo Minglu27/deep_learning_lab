@@ -1,0 +1,7 @@
+5.1
+There are three methods to define modules based on nn.Module: Sequential, ModuleList and ModuleDict
+Sequential(nn.Sequential) can use an ordered dictionary(OrderedDict).
+ModuleList(nn.ModuleList) can receive module as input, its operation likes List's. 
+But ModuleList does not have order, it should use 'forward' function to set the order of modules it stored.
+ModuleDict(nn.ModuleDict) likes ModuleList. And it can easier to add layer.
+
