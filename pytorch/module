@@ -1,7 +1,7 @@
 5.1
 There are three methods to define modules based on nn.Module: Sequential, ModuleList and ModuleDict
 Sequential(nn.Sequential) can use an ordered dictionary(OrderedDict). The definition of Sequential has _init_ and forward function, and they provide the order of input.
-'''
+```
 #normal
 import torch.nn as nn
 net = nn.Sequential(
@@ -21,9 +21,9 @@ net2 = nn.Sequential(collections.OrderedDict([
           
           ]))
 print(net2)
-'''
+```
 
-'''
+```
 Sequential(
   (0): Linear(in_features=784, out_features=256, bias=True)
   (1): ReLU()
@@ -34,7 +34,7 @@ Sequential(
   (relu1): ReLU()
   (fc2): Linear(in_features=256, out_features=10, bias=True)
 )
-'''
+```
 ModuleList(nn.ModuleList) can receive module as input, its operation likes List's. 
 But ModuleList does not have order, it should use 'forward' function to set the order of modules it stored.
 ModuleDict(nn.ModuleDict) likes ModuleList. And it can easier to add layer.
