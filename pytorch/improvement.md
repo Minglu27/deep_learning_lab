@@ -1,6 +1,9 @@
 **definition of loss function**
+
 1 use _def_ function
+
 2 class
+
   (example: Dice Loss, use in segmentation)
   dice = 1-(2*|X∩Y|/(|X|+|Y|)). OR dice = (2 * tp) / (2 * tp + fp + fn)
   dice loss=1-dice
@@ -14,6 +17,7 @@
   loss=criterion(input,targets)
   ```
 **adjust learning rate**
+
   official: torch.optim.lr_scheduler
   Every time the optimizer is updated, use scheduler to adjust lr.
   
@@ -26,6 +30,8 @@
           param_group['lr'] = lr #replace
   ```
 **finetune**
+
   from transfer learning
   1 adjust parameters from pretrained, choose whether to keep weights(_pretrained = True/ False_)
+  
   2 freeze some layers(_requires_grad = False_). Use nn.sequential get index, then change this layer.
