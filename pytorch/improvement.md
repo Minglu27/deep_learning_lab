@@ -46,8 +46,4 @@
 
   To get more batch size, change float32 to float16.
   
-  three steps:
-  from torch.cuda.amp import autocast
-  def forward()
-  with autocast(): #after input
   
